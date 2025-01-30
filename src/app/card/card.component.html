@@ -1,0 +1,17 @@
+<mat-card *ngIf="card" class="card">
+  <mat-card-header>
+    <mat-card-title>{{ card.title }}</mat-card-title>
+  </mat-card-header>
+  <img
+    mat-card-image
+    src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+    alt="Photo of a Shiba Inu"
+    class="img"
+  />
+  <mat-card-content>
+    <p>{{ card.text }}</p>
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button mat-button>See details</button>
+  </mat-card-actions>
+</mat-card>
