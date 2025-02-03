@@ -1,4 +1,4 @@
-import { Component, input } from "@angular/core";
+import { Component, input, output } from "@angular/core";
 import { MatButtonModule } from "@angular/material/button";
 import { MatSidenavModule } from "@angular/material/sidenav";
 
@@ -10,5 +10,10 @@ import { MatSidenavModule } from "@angular/material/sidenav";
   styleUrl: "./navbar.component.css",
 })
 export class NavbarComponent {
-  isOpen = input(true);
+  readonly isOpen = input(true);
+  readonly isOpenChange = output<boolean>();
+
+  closeMenu() {
+    this.isOpenChange.emit(false);
+  }
 }
