@@ -3,11 +3,13 @@ import { RouterOutlet } from '@angular/router';
 import { CardComponent } from './card/card.component';
 import { CommonModule } from '@angular/common';
 import { MatGridListModule } from '@angular/material/grid-list';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CardComponent, CommonModule, MatGridListModule],
+  imports: [RouterOutlet, CardComponent, CommonModule, MatGridListModule, MatSidenavModule, NavbarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
