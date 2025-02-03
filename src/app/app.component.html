@@ -1,5 +1,6 @@
 <mat-drawer-container class="example-container" autosize>
-  <app-navbar></app-navbar>
+  <app-navbar [isOpen]="isOpen()"></app-navbar>
+  <button mat-raised-button (click)="openMenu()">Open menu</button>
   <mat-grid-list cols="3" gutterSize="20px" class="grid">
     <mat-grid-tile *ngFor="let card of cardContent">
       <app-card [card]="card" />
