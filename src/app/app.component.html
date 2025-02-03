@@ -2,6 +2,7 @@
   <app-navbar
     [isOpen]="isOpen()"
     (isOpenChange)="isOpen.set(false)"
+    class="open-menu-button"
   ></app-navbar>
   <button mat-raised-button (click)="openMenu()">Open menu</button>
   <mat-grid-list cols="3" gutterSize="20px" class="grid">
